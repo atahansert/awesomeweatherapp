@@ -1,13 +1,21 @@
 
+body {
+    font-family: "Rubik", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(/images/signup.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .navbar {
     background-color: #333;
     width: 100%;
 }
 
-.navbar-brand {
-    color: white;
-}
-
+.navbar-brand,
 .navbar-nav .nav-link {
     color: white;
 }
@@ -25,4 +33,24 @@
 .yazi {
     color: aliceblue;
     text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0);
+}
+
+
+.login-section {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+}
+
+.login-section form input[type="submit"] {
+    margin-top: 10px;
+}
+.guess {
+color: aliceblue;
+text-align: left;
+position: fixed;
+bottom: 0;
+left: 0;
+padding: 10px;
 }

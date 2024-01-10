@@ -1,39 +1,52 @@
 
+               
+body {
+    font-family: "Rubik", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(/images/bg-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
 
-        .navbar {
+
+.navbar {
             background-color: #333; 
-        }
+}
 
-        .navbar-brand {
+.navbar-brand {
             color: white;
-        }
+}
 
-        .navbar-nav .nav-link {
+.navbar-nav .nav-link {
             color: white;
-        }
+}
 
-        .footer {
+.footer {
             background-color: #333; 
             color: white;
             text-align: center;
             padding: 20px 0;
-        }
+}
 
-        .social-icons {
+.social-icons {
             font-size: 24px;
             margin: 0 5px;
             color: white;
-        }
-        .yazi {
+}
+.yazi {
             color: aliceblue;
-        }
-        .Awesome {
+}
+.Awesome {
 
     animation: colorShift 5s infinite;
     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-        }
+}
 
-        @keyframes colorShift {
+@keyframes colorShift {
     0% {
         color: rgb(195, 216, 60); 
         }
@@ -49,4 +62,4 @@
         100% {
         color: rgb(195, 216, 60); 
         }        
-        }
+}

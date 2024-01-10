@@ -7,56 +7,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/signup.css">
 
     <style>
         body {
-            font-family: "Rubik", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            background-image: url(images/signup.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .navbar {
-            background-color: #333;
-            width: 100%;
-        }
-
-        .navbar-brand,
-        .navbar-nav .nav-link {
-            color: white;
-        }
-
-        .form-container {
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .form-container form input[type="submit"] {
-            margin-top: 10px;
-        }
-
-        .yazi {
-            color: aliceblue;
-            text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0);
-        }
-
-
-        .login-section {
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-
-        }
-
-        .login-section form input[type="submit"] {
-            margin-top: 10px;
-        }
+    font-family: "Rubik", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(/images/signup.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
     </style>
+
 </head>
 
 <body>
@@ -89,16 +54,16 @@
                     <h2 class="yazi">Sign Up</h2>
                     <form id="signupForm" action="/signup" method="post" onsubmit="validateForm(event)">
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="confirmEmail" placeholder="Confirm Email">
+                            <input type="email" class="form-control" id="confirmEmail" name="confirmEmail" placeholder="Confirm Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Sign Up">
                     </form>
@@ -120,7 +85,12 @@
                 </div>
             </div>
     </div>
-
+    <br>
+    <br>
+    <br>
+    <h3 class="guess">*<br>Psst! Don't want to register? Be my guess!<a class="btn btn-primary"
+        href="/main">to the App!</a></h3>
+    
     <script>
         function validateForm(event) {
             event.preventDefault();
@@ -141,9 +111,40 @@
             } else {
                 alert("Sign Up Successful!");
                 // to main.html
-                window.location.href = "/main";
+
             }
         }
+
+    function validateLogin(event) {
+    event.preventDefault();
+
+    // gett values from the login form
+    let loginEmail = document.getElementById('loginemail').value;
+    let loginPassword = document.getElementById('loginpassword').value;
+
+    // if email or password fields are empty
+    if (loginEmail.trim() === '') {
+        alert('Email is missing.');
+        return;
+    }
+
+    if (loginPassword.trim() === '') {
+        alert('Password is missing.');
+        return;
+    }
+
+
+    const validEmail = 'user@example.com'; 
+    const validPassword = 'password'; 
+
+    if (loginEmail === validEmail && loginPassword === validPassword) {
+        alert('Login successful!');
+        // to main.html
+        window.location.href = '/main';
+    } else {
+        alert('Your email or password is incorrect.');
+    }
+}
     </script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

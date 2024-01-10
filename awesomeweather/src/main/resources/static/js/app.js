@@ -178,34 +178,5 @@ fetchWeatherData();
 app.style.opacity = "1";
 
 
-function validateLogin(event) {
-    event.preventDefault();
 
-    // gett values from the login form
-    let loginEmail = document.getElementById('loginemail').value;
-    let loginPassword = document.getElementById('loginpassword').value;
-
-    // if email or password fields are empty
-    if (loginEmail.trim() === '') {
-        alert('Email is missing.');
-        return;
-    }
-
-    if (loginPassword.trim() === '') {
-        alert('Password is missing.');
-        return;
-    }
-
-
-    const validEmail = 'user@example.com'; 
-    const validPassword = 'password'; 
-
-    if (loginEmail === validEmail && loginPassword === validPassword) {
-        alert('Login successful!');
-        // Redirect to main.html
-        window.location.href = '/main';
-    } else {
-        alert('Your email or password is incorrect.');
-    }
-}
 
