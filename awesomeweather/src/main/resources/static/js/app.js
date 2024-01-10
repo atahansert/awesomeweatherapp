@@ -35,6 +35,8 @@ form.addEventListener('submit', (e) => {
 
         fetchWeatherData();
 
+        saveHistoryData(cityInput);
+
         search.value = "";
 
         app.style.opacity = "0";
@@ -57,6 +59,14 @@ function dayOfTheWeek(day, month, year) {
     return weekday[new Date(`${day}/${month}/${year}`).getDay()];
 }
 
+
+function saveHistoryData (text) {
+    fetch(`/history-save`, {
+        method : "POST",
+        body : {text}
+        
+    }).then(console.log)
+}
 
     // my api link and key
 function fetchWeatherData() {
@@ -171,11 +181,11 @@ app.style.opacity = "1";
 function validateLogin(event) {
     event.preventDefault();
 
-    // Get values from the login form
+    // gett values from the login form
     let loginEmail = document.getElementById('loginemail').value;
     let loginPassword = document.getElementById('loginpassword').value;
 
-    // Check if email or password fields are empty
+    // if email or password fields are empty
     if (loginEmail.trim() === '') {
         alert('Email is missing.');
         return;
@@ -186,9 +196,9 @@ function validateLogin(event) {
         return;
     }
 
-    // Simulate a check with hardcoded email and password (replace this with your actual database check)
-    const validEmail = 'user@example.com'; // Replace with your valid email
-    const validPassword = 'password'; // Replace with your valid password
+
+    const validEmail = 'user@example.com'; 
+    const validPassword = 'password'; 
 
     if (loginEmail === validEmail && loginPassword === validPassword) {
         alert('Login successful!');

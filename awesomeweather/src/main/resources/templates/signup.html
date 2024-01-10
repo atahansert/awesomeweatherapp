@@ -63,7 +63,7 @@
 
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="/index">Atahan's Awesome Weather App</a>
+            <a class="navbar-brand" href="/">Atahan's Awesome Weather App</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -87,7 +87,7 @@
                 <!-- Sign Up  -->
                 <div class="form-container">
                     <h2 class="yazi">Sign Up</h2>
-                    <form id="signupForm" action="SignupServlet" method="post" onsubmit="validateForm(event)">
+                    <form id="signupForm" action="/signup" method="post" onsubmit="validateForm(event)">
                         <div class="form-group">
                             <input type="email" class="form-control" id="email" placeholder="Email">
                         </div>
@@ -108,7 +108,7 @@
                 <!-- Login  -->
                 <div class="login-section">
                     <h2 class="yazi">Login</h2>
-                    <form id="loginForm" action="LoginServlet" method="post" onsubmit="validateLogin(event)">
+                    <form id="loginForm" action="/login" method="post" onsubmit="validateLogin(event)">
                         <div class="form-group">
                             <input type="email" class="form-control" id="loginemail" placeholder="Email" required>
                         </div>
