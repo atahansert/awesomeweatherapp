@@ -1,0 +1,28 @@
+
+.navbar {
+    background-color: #333;
+    width: 100%;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.form-container {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.form-container form input[type="submit"] {
+    margin-top: 10px;
+}
+
+.yazi {
+    color: aliceblue;
+    text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0);
+}

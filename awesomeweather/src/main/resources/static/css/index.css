@@ -1,0 +1,52 @@
+
+
+        .navbar {
+            background-color: #333; 
+        }
+
+        .navbar-brand {
+            color: white;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .footer {
+            background-color: #333; 
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .social-icons {
+            font-size: 24px;
+            margin: 0 5px;
+            color: white;
+        }
+        .yazi {
+            color: aliceblue;
+        }
+        .Awesome {
+
+    animation: colorShift 5s infinite;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+        }
+
+        @keyframes colorShift {
+    0% {
+        color: rgb(195, 216, 60); 
+        }
+        25% {
+        color: rgb(19, 117, 135);
+        }
+    50% {
+        color: rgb(217, 20, 174); 
+        }
+    75% {
+        color: rgb(251, 0, 0); 
+        }
+        100% {
+        color: rgb(195, 216, 60); 
+        }        
+        }
