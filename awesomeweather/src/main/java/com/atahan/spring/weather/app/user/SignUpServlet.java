@@ -25,15 +25,15 @@ public class SignUpServlet extends HttpServlet {
             // connection to the H2 database (its not working im too tired for this!!!)
             Connection connection = DriverManager.getConnection(url, user, password);
 
-            // create the 'users' table if it doesn't exist
+            // create the users table if it doesn't exist
             String createTableSQL = "CREATE TABLE IF NOT EXISTS users (id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(255), password VARCHAR(255))";
             Statement statement = connection.createStatement();
             statement.execute(createTableSQL);
 
-            // to insert data into the 'users' table
+            // to insert data into the users table
             String sql = "INSERT INTO users (email, password) VALUES (?, ?)";
 
-            // to execute the SQL
+            // start sql
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
